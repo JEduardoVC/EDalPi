@@ -1,38 +1,35 @@
 package com.project.edalpi.entities;
 
-import jakarta.persistence.Column;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Table(name = "users")
-public class User {
+@NoArgsConstructor
+@Table(name = "order_status_history")
+public class OrderStatusHistory {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String name;
+	private LocalDateTime creationDate;
 	
-	@Column(unique = true)
-	private String email;
+	private String statusOrder;
 	
-	private String password;
+	@OneToOne
+	@JoinColumn(name = "order_id")
+	private Order order;
 	
-	@ManyToOne
-	@JoinColumn(name = "role_id")
-	private Role role;
 }
