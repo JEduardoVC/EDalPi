@@ -4,9 +4,9 @@ EDalPi is a modern web application designed to deliver a robust and scalable sol
 The main goal of EDalPi is to provide a unique site for people to consult and observe amigurumis in order to interest the public to place their orders, ensuring high performance, maintainability, and a seamless user experience.
 
 Technologies Used:
-° Frontend: Angular (vX), RxJS, Angular Material (or Bootstrap)
-° Backend: Java 17+, Spring Boot, Spring Data JPA, Spring Security
-° Database: MySQL
+° Frontend: Angular (19), RxJS, Bootstrap (5.3)
+° Backend: Java 21, Spring Boot, Spring Data JPA, Spring Security
+° Database: PostgreSQL
 ° API Design: RESTful architecture with secure endpoints
 ° Other Tools: Maven/Gradle, Git, Postman, Swagger/OpenAPI
 
