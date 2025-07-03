@@ -19,17 +19,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "order_status_history")
 public class OrderStatusHistory {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private LocalDateTime creationDate;
-	
+
 	private String statusOrder;
-	
+
 	@OneToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
-	
+
 }

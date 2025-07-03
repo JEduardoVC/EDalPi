@@ -22,23 +22,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "orders")
 public class Order {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private LocalDateTime dateCreation;
-	
+
 	private String status;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private Client client;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "branch_id")
 	private Branch branch;
-	
+
 	@ManyToMany
 	@JoinTable(
 		name = "order_product",

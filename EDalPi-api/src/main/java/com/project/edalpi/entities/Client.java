@@ -26,16 +26,16 @@ public class Client {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-		
+
 	@Column(unique = true)
 	private int phoneNumber;
-	
+
 	private String adress;
-	
+
 	@OneToOne
 	@JoinColumn(name = "user_id", referencedColumnName = "id", unique = true)
 	private User user;
-	
+
 	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Order> order;
 }

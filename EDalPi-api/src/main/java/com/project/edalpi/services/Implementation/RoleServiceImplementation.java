@@ -12,7 +12,7 @@ import com.project.edalpi.services.RoleService;
 
 @Service
 public class RoleServiceImplementation implements RoleService {
-	
+
 	@Autowired
 	RoleRepository repository;
 

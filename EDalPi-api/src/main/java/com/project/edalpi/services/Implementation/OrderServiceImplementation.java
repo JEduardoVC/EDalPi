@@ -16,7 +16,7 @@ public class OrderServiceImplementation implements OrderService {
 
 	@Autowired
 	OrderRepository repository;
-	
+
 	@Override
 	public List<Order> findAll() {
 		return this.repository.findAll();

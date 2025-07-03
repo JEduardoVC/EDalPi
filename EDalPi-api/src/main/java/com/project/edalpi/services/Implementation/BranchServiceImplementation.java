@@ -12,7 +12,7 @@ import com.project.edalpi.services.BranchService;
 
 @Service
 public class BranchServiceImplementation implements BranchService {
-	
+
 	@Autowired
 	BranchRepository repository;
 

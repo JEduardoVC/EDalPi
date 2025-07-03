@@ -12,7 +12,7 @@ import com.project.edalpi.services.DeliveryService;
 
 @Service
 public class DeliveryServiceImplementation implements DeliveryService {
-	
+
 	@Autowired
 	DeliveryRepository repository;
 
@@ -30,7 +30,7 @@ public class DeliveryServiceImplementation implements DeliveryService {
 	public Delivery save(Delivery delivery) {
 		return this.repository.save(delivery);
 	}
-	
-	
+
+
 
 }

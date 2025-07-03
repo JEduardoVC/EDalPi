@@ -8,8 +8,8 @@ import com.project.edalpi.entities.Order;
 public interface OrderService {
 
 	List<Order> findAll();
-	
+
 	Optional<Order> findById(Long id);
-	
+
 	Order save(Order order);
 }

@@ -15,7 +15,7 @@ public class ClientServiceImplementation implements ClientService {
 
 	@Autowired
 	ClientRepository repository;
-	
+
 	@Override
 	public List<Client> findAll() {
 		return this.repository.findAll();
